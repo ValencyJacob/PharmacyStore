@@ -1,0 +1,99 @@
+﻿@page "/companies/delete/{Id:int}"
+
+@inject ICompanyService companyService
+@inject NavigationManager navigationManager
+
+<div class="container">
+
+    @if (isFailed)
+    {
+        <div class="alert alert-danger text-center">
+            <h3>
+                Something is wrong. Please call the administrator.
+            </h3>
+        </div>
+    }
+
+    <div class="card text-center">
+        <div class="card-header">
+            Delete
+        </div>
+        <div class="card-body">
+            @if (Model != null)
+            {
+                <h5 class="card-title">
+                    @Model.Name
+                </h5>
+
+                <EditForm Model="Model" OnValidSubmit="DeleteModel">
+
+                    <div class="form-group">
+                        <label>
+                            Company name
+                        </label>
+                        <InputText @bind-Value="@Model.Name" class="form-control" disabled/>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            Country
+                        </label>
+                        <InputText @bind-Value="@Model.Country" class="form-control" disabled/>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            Description
+                        </label>
+                        <InputTextArea @bind-Value="@Model.Description" rows="5" class="form-control" disabled/>
+                    </div>
+
+                    <div class="form-control border-0">
+                        <a class="btn btn-outline-primary" href="/companies/details/@Model.Id">
+                            <span class="oi oi-arrow-left"></span>
+                        </a>
+                        <button class="btn btn-outline-danger" type="submit">
+                            <span class="oi oi-delete"></span>
+                        </button>
+                    </div>
+
+                </EditForm>
+            }
+            else
+            {
+                <h1 class="text-center mt-5">
+                    Loading...
+                </h1>
+            }
+        </div>
+    </div>
+
+
+
+</div>
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    public CompanyViewModel Model = new CompanyViewModel();
+
+    private bool isFailed = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        Model = await companyService.GetByIdAsync(EndpointsService.CompanyEndpoint, Id);
+    }
+
+    private async Task DeleteModel()
+    {
+        bool isSuccess = await companyService.DeleteAsync(EndpointsService.CompanyEndpoint, Model.Id);
+
+        if (isSuccess)
+        {
+            navigationManager.NavigateTo($"/companies");
+        }
+        else
+        {
+            isFailed = true;
+        }
+    }
+}

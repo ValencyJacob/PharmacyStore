@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PharmacyStore.API</name>
+    </assembly>
+    <members>
+        <member name="M:PharmacyStore.API.Controllers.CompanyController.GetObjectsListAsync">
+            <summary>
+            Get all companies.
+            </summary>
+            <returns>Companie list</returns>
+        </member>
+        <member name="M:PharmacyStore.API.Controllers.CompanyController.GetObjectByIdAsync(System.Int32)">
+            <summary>
+            Get company by id.
+            </summary>
+            <param name="id"></param>
+            <returns>Company</returns>
+        </member>
+        <member name="M:PharmacyStore.API.Controllers.CompanyController.CreateAsync(Models.DTOs.CompanyDTO)">
+            <summary>
+            Create company.
+            </summary>
+            <param name="modelDTO"></param>
+            <returns>Add company</returns>
+        </member>
+        <member name="M:PharmacyStore.API.Controllers.CompanyController.UpdateAsync(System.Int32,Models.DTOs.CompanyDTO)">
+            <summary>
+            Update Company
+            </summary>
+            <param name="modelDTO"></param>
+            <param name="id"></param>
+            <returns>Update Company</returns>
+        </member>
+        <member name="M:PharmacyStore.API.Controllers.CompanyController.DeleteAsync(System.Int32)">
+            <summary>
+            Delete the company by Id
+            </summary>
+            <param name="id"></param>
+            <returns>Delete the company by Id</returns>
+        </member>
+        <member name="M:PharmacyStore.API.Controllers.ProductController.GetObjectsListAsync">
+            <summary>
+            Get all products
+            </summary>
+            <returns>Product List</returns>
+        </member>
+        <member name="M:PharmacyStore.API.Controllers.ProductController.GetObjectByIdAsync(System.Int32)">
+            <summary>
+            Get product by Id
+            </summary>
+            <param name="id"></param>
+            <returns>Get product by Id</returns>
+        </member>
+        <member name="M:PharmacyStore.API.Controllers.ProductController.CreateAsync(Models.DTOs.ProductDTO)">
+            <summary>
+            Create product
+            </summary>
+             <param name="modelDTO"></param>
+            <returns>Create product</returns>
+        </member>
+        <member name="M:PharmacyStore.API.Controllers.ProductController.UpdateAsync(System.Int32,Models.DTOs.ProductDTO)">
+            <summary>
+            Update product
+            </summary>
+            <param name="id"></param>
+            <param name="modelDTO"></param>
+            <returns>update product</returns>
+        </member>
+        <member name="M:PharmacyStore.API.Controllers.ProductController.DeleteAsync(System.Int32)">
+            <summary>
+            Delete product
+            </summary>
+            <param name="id"></param>
+            <returns>Delete product</returns>
+        </member>
+        <member name="M:PharmacyStore.API.Controllers.UserController.Register(Models.DTOs.UserDTO)">
+            <summary>
+            Register User
+            </summary>
+            <param name="userDTO"></param>
+            <returns>User registration</returns>
+        </member>
+        <member name="M:PharmacyStore.API.Controllers.UserController.Login(Models.DTOs.UserDTO)">
+            <summary>
+            User login
+            </summary>
+            <param name="userDTO"></param>
+            <returns>User login</returns>
+        </member>
+    </members>
+</doc>

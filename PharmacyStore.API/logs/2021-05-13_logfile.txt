@@ -1,0 +1,88 @@
+2021-05-13 10:08:26.2388 INFO The operation <get company list> was successful.
+2021-05-13 10:08:27.5644 INFO The operation <get company list> was successful.
+2021-05-13 10:13:35.7842 INFO The operation <get company list> was successful.
+2021-05-13 10:13:37.3598 INFO The operation <get company list> was successful.
+2021-05-13 11:05:37.9400 WARN admin@mail.com not authenticated!
+2021-05-13 11:07:01.5201 WARN admin@mail.com not authenticated!
+2021-05-13 11:07:29.0860 WARN customer@mail.com not authenticated!
+2021-05-13 11:09:15.7811 INFO The operation <get company list> was successful.
+2021-05-13 11:12:55.7680 INFO The operation <get company list> was successful.
+2021-05-13 11:12:58.3804 INFO The operation <get company by id: 1> was successful.
+2021-05-13 12:02:27.5963 INFO The operation <get company list> was successful.
+2021-05-13 12:02:29.6160 INFO The operation <get company by id: 1> was successful.
+2021-05-13 12:02:34.8944 INFO The operation <get company list> was successful.
+2021-05-13 12:02:36.0634 INFO The operation <get company by id: 1> was successful.
+2021-05-13 12:02:42.2916 INFO The operation <get company list> was successful.
+2021-05-13 12:03:31.0000 INFO The operation <get company list> was successful.
+2021-05-13 12:03:32.8967 INFO The operation <get company by id: 1> was successful.
+2021-05-13 12:03:41.9856 INFO The operation <get company list> was successful.
+2021-05-13 12:50:10.4228 INFO The operation <get company list> was successful.
+2021-05-13 12:50:12.4532 INFO The operation <get company by id: 1> was successful.
+2021-05-13 12:50:14.2241 INFO The operation <get company by id: 1> was successful.
+2021-05-13 12:55:20.4847 INFO The operation <get company list> was successful.
+2021-05-13 12:55:22.5598 INFO The operation <get company by id: 1> was successful.
+2021-05-13 12:55:23.9379 INFO The operation <get company by id: 1> was successful.
+2021-05-13 13:03:12.5158 INFO The operation <get company list> was successful.
+2021-05-13 13:03:14.2866 INFO The operation <get company by id: 1> was successful.
+2021-05-13 13:03:16.2994 INFO The operation <get company by id: 1> was successful.
+2021-05-13 14:24:22.6976 INFO The operation <get company list> was successful.
+2021-05-13 14:24:25.4615 INFO The operation <get company by id: 1> was successful.
+2021-05-13 14:24:31.7393 INFO The operation <get company by id: 1> was successful.
+2021-05-13 14:30:08.8944 INFO The operation <get company list> was successful.
+2021-05-13 14:30:10.4682 INFO The operation <get company by id: 1> was successful.
+2021-05-13 14:30:23.2919 INFO The operation <get company by id: 1> was successful.
+2021-05-13 14:32:08.4489 INFO The operation <update company> was successful.
+2021-05-13 14:36:02.7655 INFO The operation <get company list> was successful.
+2021-05-13 14:36:05.1837 INFO The operation <get company by id: 1> was successful.
+2021-05-13 14:36:06.0411 INFO The operation <get company list> was successful.
+2021-05-13 14:36:07.3385 INFO The operation <get company by id: 1> was successful.
+2021-05-13 14:36:10.3714 INFO The operation <get company by id: 1> was successful.
+2021-05-13 14:36:58.2033 INFO The operation <get company by id: 1> was successful.
+2021-05-13 14:37:03.5375 INFO The operation <get company by id: 1> was successful.
+2021-05-13 14:40:23.3281 INFO The operation <get company list> was successful.
+2021-05-13 14:40:25.5800 INFO The operation <get company by id: 1> was successful.
+2021-05-13 14:40:28.8520 INFO The operation <get company by id: 1> was successful.
+2021-05-13 14:51:05.9838 INFO The operation <get company list> was successful.
+2021-05-13 14:51:14.9062 INFO The operation <get company by id: 1> was successful.
+2021-05-13 14:51:19.4876 INFO The operation <get company by id: 1> was successful.
+2021-05-13 14:52:31.7809 INFO The operation <update company> was successful.
+2021-05-13 14:52:51.3236 INFO The operation <get company by id: 1> was successful.
+2021-05-13 14:52:53.7712 INFO The operation <get company list> was successful.
+2021-05-13 14:52:55.4758 INFO The operation <get company by id: 1> was successful.
+2021-05-13 14:52:59.0815 INFO The operation <get company by id: 1> was successful.
+2021-05-13 14:53:24.9105 INFO The operation <update company> was successful.
+2021-05-13 14:54:06.0641 INFO The operation <get company list> was successful.
+2021-05-13 14:54:08.3273 INFO The operation <get company by id: 1> was successful.
+2021-05-13 14:54:10.8665 INFO The operation <get company by id: 1> was successful.
+2021-05-13 14:54:59.9067 INFO The operation <update company> was successful.
+2021-05-13 14:55:17.1232 INFO The operation <get company by id: 1> was successful.
+2021-05-13 14:59:23.5472 INFO The operation <get company list> was successful.
+2021-05-13 14:59:25.0921 INFO The operation <get company by id: 1> was successful.
+2021-05-13 14:59:56.4267 INFO The operation <get company by id: 1> was successful.
+2021-05-13 15:00:58.5869 INFO The operation <get company list> was successful.
+2021-05-13 15:14:45.1585 WARN Company with Id: 1 was not found.
+2021-05-13 15:19:27.0779 INFO The operation <create company> was successful.
+2021-05-13 15:19:36.8751 INFO The operation <get company by id: 1> was successful.
+2021-05-13 15:19:55.9008 INFO The operation <get company list> was successful.
+2021-05-13 15:19:57.2188 INFO The operation <get company by id: 1> was successful.
+2021-05-13 15:20:00.4162 INFO The operation <get company by id: 1> was successful.
+2021-05-13 15:20:20.6180 INFO The operation <update company> was successful.
+2021-05-13 15:20:25.7043 INFO The operation <get company by id: 1> was successful.
+2021-05-13 15:21:27.1869 INFO The operation <get company list> was successful.
+2021-05-13 15:21:28.8930 INFO The operation <get company by id: 1> was successful.
+2021-05-13 15:21:53.1865 INFO The operation <get company by id: 1> was successful.
+2021-05-13 15:31:34.3943 ERROR User registration attempt failed.
+2021-05-13 15:31:34.4446 ERROR PasswordRequiresNonAlphanumeric - Passwords must have at least one non alphanumeric character.
+2021-05-13 15:32:04.7941 INFO The operation <get company list> was successful.
+2021-05-13 15:32:06.0670 INFO The operation <get company by id: 1> was successful.
+2021-05-13 15:32:15.1594 INFO The operation <get company by id: 1> was successful.
+2021-05-13 16:27:17.6117 INFO The operation <create company> was successful.
+2021-05-13 16:27:27.6336 INFO The operation <get company by id: 2> was successful.
+2021-05-13 16:27:34.1125 INFO The operation <get company list> was successful.
+2021-05-13 16:27:35.4421 INFO The operation <get company by id: 2> was successful.
+2021-05-13 16:27:40.1351 INFO The operation <get company by id: 2> was successful.
+2021-05-13 16:28:43.1408 INFO The operation <get company list> was successful.
+2021-05-13 16:28:45.1384 INFO The operation <get company by id: 2> was successful.
+2021-05-13 16:28:48.0385 INFO The operation <get company by id: 2> was successful.
+2021-05-13 16:28:52.9276 INFO The operation <delete company> was successful.
+2021-05-13 16:28:52.9617 INFO The operation <get company list> was successful.

@@ -1,0 +1,19 @@
+2021-04-29 10:26:08.1193 INFO The operation <get company list> was successful.
+2021-04-29 10:27:48.0525 INFO The operation <get company list> was successful.
+2021-04-29 10:53:37.3996 WARN Company with Id: 5 was not found.
+2021-04-29 10:53:55.4505 WARN Company with Id: 2 was not found.
+2021-04-29 11:33:37.6321 INFO The operation <get company list> was successful.
+2021-04-29 11:34:43.4318 ERROR Error. The operation <create company> failed. Info: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> Company
+System.Object -> Models.Company
+2021-04-29 11:36:42.7868 INFO The operation <create company> was successful.
+2021-04-29 11:39:25.9297 INFO The operation <get company by id: 1> was successful.
+2021-04-29 11:39:39.2753 INFO The operation <get company by id: 1> was successful.
+2021-04-29 12:42:14.2717 INFO The operation <update company> was successful.
+2021-04-29 12:42:26.8046 INFO The operation <get company by id: 1> was successful.
+2021-04-29 12:45:42.7457 INFO The operation <update company> was successful.
+2021-04-29 12:45:55.0699 INFO The operation <get company by id: 1> was successful.
+2021-04-29 12:48:01.1012 INFO The operation <update company> was successful.
+2021-04-29 12:48:15.1278 INFO The operation <get company by id: 1> was successful.

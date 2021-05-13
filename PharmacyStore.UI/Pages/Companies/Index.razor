@@ -1,0 +1,76 @@
+﻿@page "/companies"
+
+@inject ICompanyService companyService
+@inject NavigationManager navigationManager
+
+<div class="container">
+
+    <table class="table table-responsive">
+        <thead>
+            <tr>
+                <th>
+                    Company ID
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Country
+                </th>
+                <th>
+                    Products count
+                </th>
+                <th>
+
+                </th>
+            </tr>
+        </thead>
+        @if (Models != null)
+        {
+            <tbody>
+                @foreach (var item in Models)
+                {
+                    <tr>
+                        <td>
+                            @item.Id
+                        </td>
+                        <td>
+                            @item.Name
+                        </td>
+                        <td>
+                            @item.Country
+                        </td>
+                        <td>
+                            @item.Products.Count()
+                        </td>
+                        <td>
+                            <a class="btn btn-outline-primary" href="/companies/details/@item.Id">
+                                <span class="oi oi-list"></span>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        }
+        else
+        {
+            <tbody>
+                <tr>
+                    <td>
+                        No data.
+                    </td>
+                </tr>
+            </tbody>
+        }
+    </table>
+
+</div>
+
+@code {
+    public IList<CompanyViewModel> Models;
+
+    protected override async Task OnInitializedAsync()
+    {
+        Models = await companyService.GetAllAsync(EndpointsService.CompanyEndpoint);
+    }
+}

@@ -1,0 +1,5 @@
+2021-04-27 10:43:42.3866 ERROR Some error
+2021-04-27 10:43:52.3770 INFO Some error
+2021-04-27 10:43:54.0528 INFO Some error
+2021-04-27 10:44:00.2258 INFO Accessed Home Controller
+2021-04-27 10:44:01.4213 INFO Accessed Home Controller

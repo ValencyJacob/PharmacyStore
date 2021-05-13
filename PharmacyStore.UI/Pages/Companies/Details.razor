@@ -1,0 +1,67 @@
+﻿@page "/companies/details/{Id:int}"
+
+@inject ICompanyService companyService
+@inject NavigationManager navigationManager
+
+<div class="container">
+    <div class="card text-center">
+        <div class="card-header">
+            Details
+        </div>
+        <div class="card-body">
+            @if (Model != null)
+            {
+                <h5 class="card-title">
+                    @Model.Name
+                </h5>
+                <p class="card-text">
+                    @Model.Description
+                </p>
+                @if (Model.Products != null)
+                {
+                    <ul class="list-group list-group-flush">
+                        @foreach (var item in Model.Products)
+                        {
+                            <li class="list-group-item">
+                                @item.Name
+                            </li>
+                        }
+                    </ul>
+                }
+                
+                <AuthorizeView Roles="@StaticDetails.Role_Admin">
+                    <div class="mt-2">
+                        <a class="btn btn-outline-primary" href="/companies">
+                            <span class="oi oi-arrow-left"></span>
+                        </a>
+                        <a href="/companies/edit/@Model.Id" class="btn btn-outline-warning">
+                            <span class="oi oi-pencil"></span>
+                        </a>
+                        <a href="/companies/delete/@Model.Id" class="btn btn-outline-danger">
+                            <span class="oi oi-delete"></span>
+                        </a>
+                    </div>
+                </AuthorizeView>
+
+            }
+            else
+            {
+                <h1 class="text-center mt-5">
+                    Loading...
+                </h1>
+            }
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    private CompanyViewModel Model = new CompanyViewModel();
+
+    protected override async Task OnInitializedAsync()
+    {
+        Model = await companyService.GetByIdAsync(EndpointsService.CompanyEndpoint, Id);
+    }
+}

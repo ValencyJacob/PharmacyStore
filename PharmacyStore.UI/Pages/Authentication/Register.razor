@@ -1,0 +1,76 @@
+﻿@page "/registration"
+
+@inject IAuthenticationService authenticationService
+@inject NavigationManager navigationManager
+
+<div class="container">
+    <div class="card mt-5">
+        <h3 class="card-title">
+            Register now
+        </h3>
+
+        @if (isFailed)
+        {
+            <div class="alert alert-danger">
+                <p>
+                    Something went wrong with the registration attempt.
+                </p>
+            </div>
+        }
+
+        <div class="card-body">
+            <EditForm Model="viewModel" OnValidSubmit="HandleRegistration">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+
+                <div class="form-group">
+                    <label for="email">
+                        Email Address
+                    </label>
+                    <InputText Id="email" class="form-control" @bind-Value="viewModel.Email" />
+                    <ValidationMessage For="@(() => viewModel.Email)" />
+                </div>
+
+                <div class="form-group">
+                    <label for="password">
+                        Password
+                    </label>
+                    <InputText Id="password" type="password" class="form-control" @bind-Value="viewModel.Password" />
+                    <ValidationMessage For="@(() => viewModel.Password)" />
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmpassword">
+                        Confirm Password
+                    </label>
+                    <InputText Id="confirmpassword" type="password" class="form-control" @bind-Value="viewModel.ConfirmPassword" />
+                    <ValidationMessage For="@(() => viewModel.ConfirmPassword)" />
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">
+                    Registration
+                </button>
+
+            </EditForm>
+        </div>
+    </div>
+</div>
+
+@code {
+    private RegistrationViewModel viewModel = new RegistrationViewModel();
+    private bool isFailed = false;
+
+    private async Task HandleRegistration()
+    {
+        var response = await authenticationService.Registration(viewModel);
+
+        if (response)
+        {
+            navigationManager.NavigateTo("/login");
+        }
+        else
+        {
+            isFailed = true;
+        }
+    }
+}

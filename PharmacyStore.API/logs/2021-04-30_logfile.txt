@@ -1,0 +1,20 @@
+2021-04-30 09:49:42.1079 INFO The operation <get company by id: 1> was successful.
+2021-04-30 09:50:29.5462 INFO The operation <create company> was successful.
+2021-04-30 09:50:37.3894 INFO The operation <get company by id: 2> was successful.
+2021-04-30 12:45:02.3577 INFO The operation <get product list> was successful.
+2021-04-30 13:01:56.9682 ERROR Error. The operation <create product> failed. Info: An error occurred while updating the entries. See the inner exception for details.
+2021-04-30 13:04:42.6185 INFO The operation <create product> was successful.
+2021-04-30 13:09:05.7677 INFO The operation <get company by id: 1> was successful.
+2021-04-30 13:09:29.6222 INFO The operation <get company by id: 1> was successful.
+2021-04-30 13:17:13.6991 INFO The operation <get company by id: 1> was successful.
+2021-04-30 13:21:54.8286 INFO The operation <get company by id: 1> was successful.
+2021-04-30 16:32:05.2035 INFO The operation <get product by id: 1> was successful.
+2021-04-30 16:33:12.1018 INFO The operation <update product> was successful.
+2021-04-30 16:33:22.6003 INFO The operation <get product by id: 1> was successful.
+2021-04-30 16:54:09.4527 WARN Product with Id: 2 was not found.
+2021-04-30 16:54:19.2158 INFO The operation <get product by id: 1> was successful.
+2021-04-30 16:54:24.2377 WARN Product with Id: 3 was not found.
+2021-04-30 16:54:28.3251 WARN Product with Id: 2 was not found.
+2021-04-30 16:55:18.8786 INFO The operation <create product> was successful.
+2021-04-30 16:55:31.4150 INFO The operation <get product by id: 2> was successful.
+2021-04-30 16:56:27.4560 INFO The operation <delete product> was successful.
