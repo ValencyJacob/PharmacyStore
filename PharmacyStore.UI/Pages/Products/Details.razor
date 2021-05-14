@@ -1,6 +1,6 @@
-﻿@page "/companies/details/{Id:int}"
+﻿@page "/products/details/{Id:int}"
 
-@inject ICompanyService companyService
+@inject IProductService service
 @inject NavigationManager navigationManager
 
 @attribute [Authorize(Roles = StaticDetails.Role_Admin)]
@@ -17,17 +17,17 @@
                     @Model.Name
                 </h5>
                 <p class="card-text">
-                    @Model.Description
+                    @Model.Price
                 </p>
-                @if (Model.Products != null)
+                <p class="card-text">
+                    @Model.Summary
+                </p>
+                @if (Model.Company != null)
                 {
                     <ul class="list-group list-group-flush">
-                        @foreach (var item in Model.Products)
-                        {
-                            <li class="list-group-item">
-                                @item.Name
-                            </li>
-                        }
+                        <li class="list-group-item">
+                            @Model.Company.Name
+                        </li>
                     </ul>
                 }
 
@@ -37,11 +37,11 @@
                             <span class="oi oi-arrow-left"></span>
                             Back
                         </a>
-                        <a href="/companies/edit/@Model.Id" class="btn btn-outline-warning">
+                        <a href="/products/edit/@Model.Id" class="btn btn-outline-warning">
                             <span class="oi oi-pencil"></span>
                             Edit
                         </a>
-                        <a href="/companies/delete/@Model.Id" class="btn btn-outline-danger">
+                        <a href="/products/delete/@Model.Id" class="btn btn-outline-danger">
                             <span class="oi oi-delete"></span>
                             Delete
                         </a>
@@ -63,10 +63,10 @@
     [Parameter]
     public int Id { get; set; }
 
-    private CompanyViewModel Model = new CompanyViewModel();
+    private ProductViewModel Model = new ProductViewModel();
 
     protected override async Task OnInitializedAsync()
     {
-        Model = await companyService.GetByIdAsync(EndpointsService.CompanyEndpoint, Id);
+        Model = await service.GetByIdAsync(EndpointsService.ProductEndpoint, Id);
     }
 }

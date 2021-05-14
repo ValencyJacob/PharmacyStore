@@ -32,14 +32,14 @@ namespace BusinessLogic.Repository
 
         public async Task<IList<Product>> GetAllAsync()
         {
-            var objects = await _db.Products.ToListAsync();
+            var objects = await _db.Products.Include(x => x.Company).ToListAsync();
 
             return objects;
         }
 
         public async Task<Product> GetByIdAsync(int id)
         {
-            var obj = await _db.Products.FirstOrDefaultAsync(x => x.Id == id);
+            var obj = await _db.Products.Include(x => x.Company).FirstOrDefaultAsync(x => x.Id == id);
 
             return obj;
         }

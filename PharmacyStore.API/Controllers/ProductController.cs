@@ -96,7 +96,6 @@ namespace PharmacyStore.API.Controllers
         ///  <param name="modelDTO"></param>
         /// <returns>Create product</returns>
         [HttpPost]
-        //[Authorize(Roles = StaticDetails.Role_Admin)]
         public async Task<IActionResult> CreateAsync([FromBody] ProductDTO modelDTO)
         {
             try
@@ -141,7 +140,6 @@ namespace PharmacyStore.API.Controllers
         /// <param name="modelDTO"></param>
         /// <returns>update product</returns>
         [HttpPut("{id}")]
-        //[Authorize(Roles = StaticDetails.Role_Admin)]
         public async Task<IActionResult> UpdateAsync(int id, [FromBody] ProductDTO modelDTO)
         {
             try
@@ -188,7 +186,6 @@ namespace PharmacyStore.API.Controllers
         /// <param name="id"></param>
         /// <returns>Delete product</returns>
         [HttpDelete("{id}")]
-        //[Authorize(Roles = StaticDetails.Role_Admin)]
         public async Task<IActionResult> DeleteAsync(int id)
         {
             try

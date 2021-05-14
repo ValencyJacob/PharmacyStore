@@ -1,6 +1,6 @@
-﻿@page "/companies/delete/{Id:int}"
+﻿@page "/products/delete/{Id:int}"
 
-@inject ICompanyService companyService
+@inject IProductService service
 @inject NavigationManager navigationManager
 
 @attribute [Authorize(Roles = StaticDetails.Role_Admin)]
@@ -31,25 +31,25 @@
 
                     <div class="form-group">
                         <label>
-                            Company name
+                            Product
                         </label>
                         <InputText @bind-Value="@Model.Name" class="form-control" disabled />
                     </div>
                     <div class="form-group">
                         <label>
-                            Country
+                            Price
                         </label>
-                        <InputText @bind-Value="@Model.Country" class="form-control" disabled />
+                        <InputNumber @bind-Value="@Model.Price" class="form-control" disabled />
                     </div>
                     <div class="form-group">
                         <label>
                             Description
                         </label>
-                        <InputTextArea @bind-Value="@Model.Description" rows="5" class="form-control" disabled />
+                        <InputTextArea @bind-Value="@Model.Summary" rows="5" class="form-control" disabled />
                     </div>
 
                     <div class="form-control border-0">
-                        <a class="btn btn-outline-primary" href="/companies/details/@Model.Id">
+                        <a class="btn btn-outline-primary" href="/products/details/@Model.Id">
                             <span class="oi oi-arrow-left"></span>
                             Back
                         </a>
@@ -78,22 +78,22 @@
     [Parameter]
     public int Id { get; set; }
 
-    public CompanyViewModel Model = new CompanyViewModel();
+    public ProductViewModel Model = new ProductViewModel();
 
     private bool isFailed = false;
 
     protected override async Task OnInitializedAsync()
     {
-        Model = await companyService.GetByIdAsync(EndpointsService.CompanyEndpoint, Id);
+        Model = await service.GetByIdAsync(EndpointsService.ProductEndpoint, Id);
     }
 
     private async Task DeleteModel()
     {
-        bool isSuccess = await companyService.DeleteAsync(EndpointsService.CompanyEndpoint, Model.Id);
+        bool isSuccess = await service.DeleteAsync(EndpointsService.ProductEndpoint, Model.Id);
 
         if (isSuccess)
         {
-            navigationManager.NavigateTo($"/companies");
+            navigationManager.NavigateTo($"/products");
         }
         else
         {

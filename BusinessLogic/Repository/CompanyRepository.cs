@@ -32,7 +32,7 @@ namespace BusinessLogic.Repository
 
         public async Task<IList<Company>> GetAllAsync()
         {
-            var objects = await _db.Companies.ToListAsync();
+            var objects = await _db.Companies.Include(x => x.Products).ToListAsync();
 
             return objects;
         }

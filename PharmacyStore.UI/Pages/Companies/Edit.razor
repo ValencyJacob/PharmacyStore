@@ -3,6 +3,8 @@
 @inject ICompanyService companyService
 @inject NavigationManager navigationManager
 
+@attribute [Authorize(Roles = StaticDetails.Role_Admin)]
+
 <div class="container">
 
     @if (isFailed)
@@ -24,37 +26,45 @@
                 <h5 class="card-title">
                     @Model.Name
                 </h5>
-                
+
                 <EditForm Model="Model" OnValidSubmit="EditModel">
-                    <DataAnnotationsValidator/>
-                    <ValidationSummary/>
+                    <DataAnnotationsValidator />
+                    <ValidationSummary />
 
                     <div class="form-group">
                         <label>
                             Company name
                         </label>
                         <InputText @bind-Value="@Model.Name" class="form-control" />
+                        <ValidationMessage For="()=>Model.Name"></ValidationMessage>
                     </div>
                     <div class="form-group">
                         <label>
                             Country
                         </label>
                         <InputText @bind-Value="@Model.Country" class="form-control" />
+                        <ValidationMessage For="()=>Model.Country"></ValidationMessage>
                     </div>
                     <div class="form-group">
                         <label>
                             Description
                         </label>
                         <InputTextArea @bind-Value="@Model.Description" rows="5" class="form-control" />
+                        <ValidationMessage For="()=>Model.Description"></ValidationMessage>
                     </div>
 
                     <div class="form-control border-0">
-                        <button class="btn btn-outline-warning" type="submit">
-                            <span class="oi oi-pencil"></span>
-                        </button>
+
                         <a class="btn btn-outline-primary" href="/companies/details/@Model.Id">
                             <span class="oi oi-arrow-left"></span>
+                            Back
                         </a>
+
+                        <button class="btn btn-outline-warning" type="submit">
+                            <span class="oi oi-pencil"></span>
+                            Edit
+                        </button>
+
                     </div>
 
                 </EditForm>

@@ -38,6 +38,7 @@ namespace PharmacyStore.UI
             services.AddHttpClient();
             services.AddTransient<IAuthenticationService, AuthenticationService>();
             services.AddTransient<ICompanyService, CompanyService>();
+            services.AddTransient<IProductService, ProductService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

@@ -29,7 +29,7 @@ namespace PharmacyStore.UI.Services
                 return false;
             }
 
-            request.Content = new StringContent(JsonConvert.SerializeObject(obj));
+            request.Content = new StringContent(JsonConvert.SerializeObject(obj), Encoding.UTF8, "application/json");
 
             var client = _httpClient.CreateClient();
 
@@ -113,8 +113,7 @@ namespace PharmacyStore.UI.Services
             if (obj == null)
                 return false;
 
-            request.Content = new StringContent(JsonConvert.SerializeObject(obj)
-                , Encoding.UTF8, "application/json");
+            request.Content = new StringContent(JsonConvert.SerializeObject(obj), Encoding.UTF8, "application/json");
 
             var client = _httpClient.CreateClient();
             client.DefaultRequestHeaders.Authorization =

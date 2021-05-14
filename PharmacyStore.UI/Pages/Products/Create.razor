@@ -1,0 +1,98 @@
+﻿@page "/product/create"
+
+@inject IProductService service
+@inject NavigationManager navigationManager
+
+@attribute [Authorize(Roles = StaticDetails.Role_Admin)]
+
+<div class="container">
+
+    @if (isFailed)
+    {
+        <div class="alert alert-danger text-center">
+            <h3>
+                Something is wrong. Please call the administrator.
+            </h3>
+        </div>
+    }
+
+    <div class="card text-center">
+        <div class="card-header">
+            Add Company
+        </div>
+        <div class="card-body">
+            <EditForm Model="Model" OnValidSubmit="CreateModel">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+
+                <div class="form-group">
+                    <label>
+                        Product name
+                    </label>
+                    <InputText @bind-Value="@Model.Name" class="form-control" />
+                    <ValidationMessage For="()=>Model.Name"></ValidationMessage>
+                </div>
+                <div class="form-group">
+                    <label>
+                        Price
+                    </label>
+                    <InputNumber @bind-Value="@Model.Price" class="form-control" />
+                    <ValidationMessage For="()=>Model.Price"></ValidationMessage>
+                </div>
+                <div class="form-group">
+                    <label>
+                        Description
+                    </label>
+                    <InputTextArea @bind-Value="@Model.Summary" rows="5" class="form-control" />
+                    <ValidationMessage For="()=>Model.Summary"></ValidationMessage>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        Here will an Image
+                    </label>
+                </div>
+
+                <div class="form-control border-0">
+                    <a class="btn btn-outline-primary" href="products">
+                        <span class="oi oi-arrow-left"></span>
+                        Back
+                    </a>
+
+                    <button class="btn btn-outline-success" type="submit">
+                        <span class="oi oi-plus"></span>
+                        Add
+                    </button>
+
+                </div>
+
+            </EditForm>
+        </div>
+    </div>
+</div>
+
+@code {
+
+    public ProductViewModel Model = new ProductViewModel();
+
+    private bool isFailed = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+
+    }
+
+    private async Task CreateModel()
+    {
+        bool isSuccess = await service.CreateAsync(EndpointsService.ProductEndpoint, Model);
+
+        if (isSuccess)
+        {
+            navigationManager.NavigateTo($"/products");
+        }
+        else
+        {
+            isFailed = true;
+        }
+    }
+}

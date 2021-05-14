@@ -89,7 +89,6 @@ namespace PharmacyStore.API.Controllers
         /// <param name="modelDTO"></param>
         /// <returns>Add company</returns>
         [HttpPost]
-        //[Authorize(Roles = StaticDetails.Role_Admin)]
         public async Task<IActionResult> CreateAsync([FromBody] CompanyDTO modelDTO)
         {
             try
@@ -134,7 +133,6 @@ namespace PharmacyStore.API.Controllers
         /// <param name="id"></param>
         /// <returns>Update Company</returns>
         [HttpPut("{id}")]
-        //[Authorize(Roles = StaticDetails.Role_Admin)] //It doesn't work. I don't know why.
         public async Task<IActionResult> UpdateAsync(int id, [FromBody] CompanyDTO modelDTO)
         {
             try
@@ -178,7 +176,6 @@ namespace PharmacyStore.API.Controllers
         /// <param name="id"></param>
         /// <returns>Delete the company by Id</returns>
         [HttpDelete("{id}")]
-        //[Authorize(Roles = StaticDetails.Role_Admin)]
         public async Task<IActionResult> DeleteAsync(int id)
         {
             try

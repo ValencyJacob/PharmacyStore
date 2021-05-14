@@ -1,0 +1,47 @@
+2021-05-14 09:58:48.7191 INFO The operation <get company list> was successful.
+2021-05-14 09:59:33.5739 INFO The operation <get company list> was successful.
+2021-05-14 10:00:32.4986 INFO The operation <get company list> was successful.
+2021-05-14 10:04:11.8278 INFO The operation <get company list> was successful.
+2021-05-14 10:05:22.7755 INFO The operation <create company> was successful.
+2021-05-14 10:05:47.1099 INFO The operation <get company list> was successful.
+2021-05-14 10:32:19.0627 INFO The operation <get company list> was successful.
+2021-05-14 10:33:31.0651 INFO The operation <get company list> was successful.
+2021-05-14 10:33:36.2024 INFO The operation <get company by id: 1> was successful.
+2021-05-14 10:33:38.1773 INFO The operation <get company list> was successful.
+2021-05-14 10:33:38.9601 INFO The operation <get company by id: 3> was successful.
+2021-05-14 10:33:40.3605 INFO The operation <get company by id: 3> was successful.
+2021-05-14 10:33:41.6996 INFO The operation <get company by id: 3> was successful.
+2021-05-14 10:33:45.2320 INFO The operation <get company by id: 3> was successful.
+2021-05-14 10:33:48.0496 INFO The operation <get company by id: 3> was successful.
+2021-05-14 10:33:49.0738 INFO The operation <get company list> was successful.
+2021-05-14 10:34:29.5019 INFO The operation <get company list> was successful.
+2021-05-14 10:35:01.3289 INFO The operation <get company list> was successful.
+2021-05-14 10:35:30.4536 INFO The operation <get company list> was successful.
+2021-05-14 10:36:05.4398 INFO The operation <get company list> was successful.
+2021-05-14 10:36:37.9082 INFO The operation <get company list> was successful.
+2021-05-14 10:41:11.8480 INFO The operation <get company list> was successful.
+2021-05-14 10:41:20.0193 INFO The operation <get company by id: 1> was successful.
+2021-05-14 10:41:21.1848 INFO The operation <get company list> was successful.
+2021-05-14 10:41:23.1624 INFO The operation <get company list> was successful.
+2021-05-14 10:41:52.9625 INFO The operation <get company list> was successful.
+2021-05-14 10:41:55.0100 INFO The operation <get company by id: 3> was successful.
+2021-05-14 10:41:56.2499 INFO The operation <get company list> was successful.
+2021-05-14 10:43:32.9216 INFO The operation <get company by id: 1> was successful.
+2021-05-14 12:02:16.9078 INFO The operation <get product list> was successful.
+2021-05-14 12:02:28.3122 INFO The operation <get company list> was successful.
+2021-05-14 12:02:28.5073 INFO The operation <get product list> was successful.
+2021-05-14 12:02:29.8428 INFO The operation <get company list> was successful.
+2021-05-14 12:03:24.6087 INFO The operation <get product list> was successful.
+2021-05-14 12:04:20.2684 INFO The operation <get product list> was successful.
+2021-05-14 15:42:41.6249 INFO The operation <get product list> was successful.
+2021-05-14 15:42:45.6063 INFO The operation <get company list> was successful.
+2021-05-14 15:42:47.8739 INFO The operation <get company by id: 1> was successful.
+2021-05-14 15:42:49.6605 INFO The operation <get company by id: 1> was successful.
+2021-05-14 15:43:01.2992 INFO The operation <update company> was successful.
+2021-05-14 15:43:01.3382 INFO The operation <get company by id: 1> was successful.
+2021-05-14 15:43:03.9377 INFO The operation <get company list> was successful.
+2021-05-14 15:43:05.4262 INFO The operation <get product list> was successful.
+2021-05-14 15:43:07.2968 INFO The operation <get product by id: 1> was successful.
+2021-05-14 15:43:11.7572 INFO The operation <get product by id: 1> was successful.
+2021-05-14 15:43:16.6821 INFO The operation <get product by id: 1> was successful.
+2021-05-14 15:43:18.1874 INFO The operation <get product by id: 1> was successful.
