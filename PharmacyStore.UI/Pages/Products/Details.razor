@@ -2,6 +2,7 @@
 
 @inject IProductService service
 @inject NavigationManager navigationManager
+@inject IToastService toastService
 
 @attribute [Authorize(Roles = StaticDetails.Role_Admin)]
 
@@ -13,6 +14,7 @@
         <div class="card-body">
             @if (Model != null)
             {
+                <img src="images/@Model.Image" class="card-img-top mb-1 mt-1" alt="product image">
                 <h5 class="card-title">
                     @Model.Name
                 </h5>
@@ -26,14 +28,26 @@
                 {
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
-                            @Model.Company.Name
+                            <a href="/companies/details/@Model.Id">
+                                @Model.Company.Name / @Model.Company.Country
+                            </a>
+                        </li>
+                    </ul>
+                }
+                else
+                {
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <p>
+                                No company recorded
+                            </p>
                         </li>
                     </ul>
                 }
 
                 <AuthorizeView Roles="@StaticDetails.Role_Admin">
                     <div class="mt-2">
-                        <a class="btn btn-outline-primary" href="/companies">
+                        <a class="btn btn-outline-primary" href="/products">
                             <span class="oi oi-arrow-left"></span>
                             Back
                         </a>

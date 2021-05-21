@@ -2,6 +2,8 @@
 
 @inject IProductService service
 @inject NavigationManager navigationManager
+@inject IFileUpload fileUpload
+@inject IToastService toastService
 
 @attribute [Authorize(Roles = StaticDetails.Role_Admin)]
 
@@ -89,10 +91,13 @@
 
     private async Task DeleteModel()
     {
+        fileUpload.RemoveFile(Model.Image);
+
         bool isSuccess = await service.DeleteAsync(EndpointsService.ProductEndpoint, Model.Id);
 
         if (isSuccess)
         {
+            toastService.ShowSuccess($"{Model.Name} removed successfuly!");
             navigationManager.NavigateTo($"/products");
         }
         else

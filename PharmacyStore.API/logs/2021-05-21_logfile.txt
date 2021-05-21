@@ -1,0 +1,60 @@
+2021-05-21 10:16:36.8616 INFO The operation <get company list> was successful.
+2021-05-21 10:30:34.0030 INFO The operation <get company list> was successful.
+2021-05-21 10:30:36.0786 INFO The operation <get product list> was successful.
+2021-05-21 10:32:00.3203 INFO The operation <get product list> was successful.
+2021-05-21 10:32:04.2455 INFO The operation <get company list> was successful.
+2021-05-21 10:32:41.7796 INFO The operation <create product. Id: 0> was successful.
+2021-05-21 10:32:42.9867 INFO The operation <get product list> was successful.
+2021-05-21 10:32:59.4558 INFO The operation <get company list> was successful.
+2021-05-21 10:33:00.2168 INFO The operation <get product list> was successful.
+2021-05-21 10:35:06.7827 INFO The operation <get company list> was successful.
+2021-05-21 10:35:08.8183 INFO The operation <get product list> was successful.
+2021-05-21 10:40:15.9989 INFO The operation <get company list> was successful.
+2021-05-21 10:40:18.7944 INFO The operation <get product list> was successful.
+2021-05-21 10:56:27.0289 INFO The operation <get company list> was successful.
+2021-05-21 10:56:27.7060 INFO The operation <get product list> was successful.
+2021-05-21 11:58:56.1561 INFO The operation <get product list> was successful.
+2021-05-21 11:58:56.1561 INFO The operation <get company list> was successful.
+2021-05-21 11:59:17.1088 INFO The operation <create company> was successful.
+2021-05-21 11:59:17.4829 INFO The operation <get company list> was successful.
+2021-05-21 11:59:20.5208 INFO The operation <get product list> was successful.
+2021-05-21 11:59:21.6764 INFO The operation <get company list> was successful.
+2021-05-21 11:59:23.7009 INFO The operation <get product list> was successful.
+2021-05-21 11:59:24.5348 INFO The operation <get company list> was successful.
+2021-05-21 12:00:11.3944 INFO The operation <create product. Id: 0> was successful.
+2021-05-21 12:00:11.6945 INFO The operation <get product list> was successful.
+2021-05-21 12:00:15.0419 INFO The operation <get company list> was successful.
+2021-05-21 12:00:51.1748 INFO The operation <create product. Id: 0> was successful.
+2021-05-21 12:00:51.3364 INFO The operation <get product list> was successful.
+2021-05-21 12:00:58.5375 INFO The operation <get company list> was successful.
+2021-05-21 12:02:51.1151 INFO The operation <get company list> was successful.
+2021-05-21 12:02:52.4047 INFO The operation <get product list> was successful.
+2021-05-21 12:07:01.7064 INFO The operation <get company list> was successful.
+2021-05-21 12:07:03.3989 INFO The operation <get product list> was successful.
+2021-05-21 12:09:07.4568 INFO The operation <get company list> was successful.
+2021-05-21 12:09:08.6270 INFO The operation <get product list> was successful.
+2021-05-21 12:10:18.2218 INFO The operation <get company list> was successful.
+2021-05-21 12:10:19.5580 INFO The operation <get product list> was successful.
+2021-05-21 12:14:31.4836 INFO The operation <get company list> was successful.
+2021-05-21 12:14:32.9814 INFO The operation <get product list> was successful.
+2021-05-21 12:14:34.5105 INFO The operation <get product list> was successful.
+2021-05-21 12:14:38.9202 INFO The operation <get product by id: 1> was successful.
+2021-05-21 12:14:40.8399 INFO The operation <get product by id: 1> was successful.
+2021-05-21 12:14:40.9114 INFO The operation <get company list> was successful.
+2021-05-21 12:15:15.9784 INFO The operation <update product. Id: 1> was successful.
+2021-05-21 12:15:16.0673 INFO The operation <get product list> was successful.
+2021-05-21 12:15:19.3160 INFO The operation <get product by id: 2> was successful.
+2021-05-21 12:15:21.2345 INFO The operation <get product by id: 2> was successful.
+2021-05-21 12:15:21.3280 INFO The operation <get company list> was successful.
+2021-05-21 12:15:29.4784 INFO The operation <update product. Id: 2> was successful.
+2021-05-21 12:15:29.5483 INFO The operation <get product list> was successful.
+2021-05-21 12:15:37.0902 INFO The operation <get company list> was successful.
+2021-05-21 12:15:38.0194 INFO The operation <get product list> was successful.
+2021-05-21 12:16:56.2903 INFO The operation <get company list> was successful.
+2021-05-21 12:16:57.9354 INFO The operation <get product list> was successful.
+2021-05-21 12:17:39.9232 INFO The operation <get product list> was successful.
+2021-05-21 12:17:42.0978 INFO The operation <get company list> was successful.
+2021-05-21 12:19:28.4485 INFO The operation <create product. Id: 0> was successful.
+2021-05-21 12:19:28.6042 INFO The operation <get product list> was successful.
+2021-05-21 12:19:48.4117 INFO The operation <get company list> was successful.
+2021-05-21 12:19:49.1944 INFO The operation <get product list> was successful.

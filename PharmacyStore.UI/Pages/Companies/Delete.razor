@@ -2,6 +2,7 @@
 
 @inject ICompanyService companyService
 @inject NavigationManager navigationManager
+@inject IToastService toastService
 
 @attribute [Authorize(Roles = StaticDetails.Role_Admin)]
 
@@ -93,6 +94,7 @@
 
         if (isSuccess)
         {
+            toastService.ShowSuccess($"{Model.Name} removed successfuly!");
             navigationManager.NavigateTo($"/companies");
         }
         else

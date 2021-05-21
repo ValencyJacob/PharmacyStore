@@ -2,6 +2,7 @@
 
 @inject ICompanyService companyService
 @inject NavigationManager navigationManager
+@inject IToastService toastService
 
 @attribute [Authorize(Roles = StaticDetails.Role_Admin)]
 
@@ -72,17 +73,13 @@
 
     private bool isFailed = false;
 
-    protected override async Task OnInitializedAsync()
-    {
-
-    }
-
     private async Task CreateModel()
     {
         bool isSuccess = await companyService.CreateAsync(EndpointsService.CompanyEndpoint, Model);
 
         if (isSuccess)
         {
+            toastService.ShowSuccess($"{Model.Name} added successfuly!");
             navigationManager.NavigateTo($"/companies");
         }
         else

@@ -1,4 +1,5 @@
 using Blazored.LocalStorage;
+using Blazored.Toast;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Authorization;
@@ -32,13 +33,18 @@ namespace PharmacyStore.UI
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddBlazoredLocalStorage();
+            services.AddBlazoredToast();
+            services.AddHttpContextAccessor();
+
             services.AddScoped<APIAuthStateProvider>();
             services.AddScoped<AuthenticationStateProvider>(x => x.GetRequiredService<APIAuthStateProvider>());
             services.AddScoped<JwtSecurityTokenHandler>();
             services.AddHttpClient();
+
             services.AddTransient<IAuthenticationService, AuthenticationService>();
-            services.AddTransient<ICompanyService, CompanyService>();
-            services.AddTransient<IProductService, ProductService>();
+            services.AddScoped<ICompanyService, CompanyService>();
+            services.AddScoped<IProductService, ProductService>();
+            services.AddTransient<IFileUpload, FileUpload>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

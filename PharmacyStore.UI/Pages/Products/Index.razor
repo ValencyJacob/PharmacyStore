@@ -50,16 +50,27 @@
                                 @item.Id
                             </td>
                             <td>
-                                <img src="~/images/@item.Image" style="width:50px; height:50px;"/>
+                                <img src="images/@item.Image" style="width:50px; height:50px;"/>
                             </td>
                             <td>
                                 @item.Name
                             </td>
                             <td>
-                                @item.Company.Name / @item.Company.Country
+                                @if (item.Company != null)
+                                {
+                                    <a href="/companies/details/@item.Id">
+                                        @item.Company.Name / @item.Company.Country
+                                    </a>
+                                }
+                                else
+                                {
+                                    <p>
+                                        No company recorded 
+                                    </p>
+                                }
                             </td>
                             <td>
-                                @item.Price
+                                @string.Format("{0:C}", item.Price)
                             </td>
                             <td>
                                 <a class="btn btn-outline-primary" href="/products/details/@item.Id">

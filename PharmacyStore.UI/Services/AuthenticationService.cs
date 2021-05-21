@@ -29,12 +29,12 @@ namespace PharmacyStore.UI.Services
 
         public async Task<bool> Login(LoginViewModel model)
         {
-            var request = new HttpRequestMessage(HttpMethod.Post, EndpointsService.LoginEndpoint);
-
-            request.Content = new StringContent(JsonConvert.SerializeObject(model), Encoding.UTF8, "application/json");
+            var request = new HttpRequestMessage(HttpMethod.Post
+               , EndpointsService.LoginEndpoint);
+            request.Content = new StringContent(JsonConvert.SerializeObject(model)
+                , Encoding.UTF8, "application/json");
 
             var client = _httpClientFactory.CreateClient();
-
             HttpResponseMessage response = await client.SendAsync(request);
 
             if (!response.IsSuccessStatusCode)
@@ -45,11 +45,15 @@ namespace PharmacyStore.UI.Services
             var content = await response.Content.ReadAsStringAsync();
             var token = JsonConvert.DeserializeObject<TokenResponse>(content);
 
+            //Store Token
             await _localStorageService.SetItemAsync("authToken", token.Token);
 
-            await ((APIAuthStateProvider)_authenticationState).LoggedIn();
+            //Change auth state of app
+            await ((APIAuthStateProvider)_authenticationState)
+                .LoggedIn();
 
-            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", token.Token);
+            client.DefaultRequestHeaders.Authorization =
+                new AuthenticationHeaderValue("bearer", token.Token);
 
             return true;
         }

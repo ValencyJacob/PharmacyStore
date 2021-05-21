@@ -1,0 +1,77 @@
+﻿@page "/"
+
+@inject ICompanyService companyService
+@inject IProductService productService
+
+@if (IsProcessing)
+{
+    <div style="position:fixed;top:50%;left:50%;margin-top:-50px;">
+        Loading...
+    </div>
+}
+else
+{
+    <div class="container mt-5">
+        <div class="row">
+            @foreach (var item in CompanyList)
+            {
+                <div class="col-md-4 col-6 p-4">
+                    <div style="border:1px solid #000000; border-radius:20px;">
+                        <div class="row col-4 offset-4 p-4">
+                        </div>
+                        <div class="text-center justify-content-center">
+                            <h5 class="text-warning">@item.Name</h5>
+                            @((MarkupString)item.Description)
+                        </div>
+                        @if (item.Products != null)
+                        {
+                            <div>
+                                @foreach (var prod in item.Products)
+                                {
+                                    <p>
+                                        @prod.Name
+                                    </p>
+                                    <img class="d-block w-100" style="border-radius:20px;"
+                                         src="@prod.Image" alt="First slide">
+                                    <p>
+                                        @((MarkupString)prod.Summary)
+                                    </p>
+                                }
+                            </div>
+                        }
+                        else
+                        {
+                            <p>
+                                No product
+                            </p>
+                        }
+
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}
+
+@code{
+    public IEnumerable<CompanyDTO> CompanyList { get; set; } = new List<CompanyDTO>();
+
+    public bool IsProcessing { get; set; } = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            IsProcessing = true;
+
+            // Load objects from API.
+            CompanyList = await companyService.GetAll();
+
+            IsProcessing = false;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+    }
+}

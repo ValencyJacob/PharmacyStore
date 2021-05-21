@@ -2,6 +2,7 @@
 
 @inject ICompanyService companyService
 @inject NavigationManager navigationManager
+@inject IToastService toastService
 
 @attribute [Authorize(Roles = StaticDetails.Role_Admin)]
 
@@ -98,6 +99,7 @@
 
         if (isSuccess)
         {
+            toastService.ShowSuccess($"{Model.Name} updated successfuly!");
             navigationManager.NavigateTo($"/companies/details/{Model.Id}");
         }
         else

@@ -1,13 +1,16 @@
 ﻿@page "/products/edit/{Id:int}"
 
 @inject IProductService service
+@inject ICompanyService companyService
 @inject NavigationManager navigationManager
+@inject IFileUpload _fileUpload
+@inject IToastService toastService
 
 @attribute [Authorize(Roles = StaticDetails.Role_Admin)]
 
 <div class="container">
 
-    @if (isFailed)
+    @if (!isSuccess)
     {
         <div class="alert alert-danger text-center">
             <h3>
@@ -33,41 +36,74 @@
 
                     <div class="form-group">
                         <label>
-                            Company name
+                            Product name
                         </label>
                         <InputText @bind-Value="@Model.Name" class="form-control" />
-                        <ValidationMessage For="()=>Model.Name"></ValidationMessage>
+                        <ValidationMessage For="() => Model.Name"></ValidationMessage>
                     </div>
+
                     <div class="form-group">
                         <label>
                             Price
                         </label>
                         <InputNumber @bind-Value="@Model.Price" class="form-control" />
-                        <ValidationMessage For="()=>Model.Price"></ValidationMessage>
+                        <ValidationMessage For="() => Model.Price"></ValidationMessage>
                     </div>
+
+                    <div class="form-group">
+                        <label>
+                            Company
+                        </label>
+                        <select @bind="@Model.CompanyId" class="form-control" id="company">
+                            <option value="">--Select Company--</option>
+                            @if (CompanyVM != null)
+                            {
+                                foreach (var item in CompanyVM)
+                                {
+                                    <option value="@item.Id">@item.Name</option>
+                                }
+                            }
+                        </select>
+                        <ValidationMessage For="() => Model.CompanyId"></ValidationMessage>
+                    </div>
+
                     <div class="form-group">
                         <label>
                             Description
                         </label>
                         <InputTextArea @bind-Value="@Model.Summary" rows="5" class="form-control" />
-                        <ValidationMessage For="()=>Model.Summary"></ValidationMessage>
+                        <ValidationMessage For="() => Model.Summary"></ValidationMessage>
                     </div>
 
                     <div class="form-group">
                         <label>
-                            Here will be Image
+                            Product Image
                         </label>
+                        <InputFile OnChange="HandleFileSelection" />
+                        @if (isInvalidFileType)
+                        {
+                            <p>
+                                Please remove the invalid file type and select as new image, or leave this field blank
+                            </p>
+                        }
+                        @if (!string.IsNullOrWhiteSpace(imageDataURL))
+                        {
+                            <img src="@imageDataURL" style="height:100px;width:100px" />
+                        }
+                        else if (!string.IsNullOrWhiteSpace(Model.Image))
+                        {
+                            <img src="images/@Model.Image" style="height:100px;width:100px" />
+                        }
                     </div>
 
                     <div class="form-control border-0">
-
-                        <a class="btn btn-outline-primary" href="/products/details/@Model.Id">
+                        <a class="btn btn-outline-primary" href="products">
                             <span class="oi oi-arrow-left"></span>
                             Back
                         </a>
 
-                        <button class="btn btn-outline-warning" type="submit">
-                            <span class="oi oi-pencil"></span>
+                        <button class="btn btn-outline-success" type="submit">
+                            <span class="oi oi-plus"></span>
                             Edit
                         </button>
 
@@ -90,25 +126,91 @@
     public int Id { get; set; }
 
     public ProductViewModel Model = new ProductViewModel();
+    public IList<CompanyViewModel> CompanyVM;
 
-    private bool isFailed = false;
+    private IBrowserFile file;
+
+    private bool isSuccess = true;
+    private bool isInvalidFileType = false;
+    private bool isFileChanged = false;
+
+    private string imageDataURL;
+    private Stream msFile;
 
     protected override async Task OnInitializedAsync()
     {
         Model = await service.GetByIdAsync(EndpointsService.ProductEndpoint, Id);
+        CompanyVM = await companyService.GetAllAsync(EndpointsService.CompanyEndpoint);
     }
 
     private async Task EditModel()
     {
-        bool isSuccess = await service.UpdateAsync(EndpointsService.ProductEndpoint, Model, Model.Id);
-
-        if (isSuccess)
+        if (!isInvalidFileType)
         {
-            navigationManager.NavigateTo($"/products/details/{Model.Id}");
+            if (file != null)
+            {
+                var ext = Path.GetExtension(file.Name);
+                var pictureId = Guid.NewGuid().ToString().Replace("-", "");
+                var pictureName = $"{pictureId}{ext}";
+
+                _fileUpload.RemoveFile(Model.Image);
+
+                await _fileUpload.UploadFile(msFile, pictureName);
+
+                Model.Image = pictureName;
+            }
+            else if (isFileChanged && file == null)
+            {
+                _fileUpload.RemoveFile(Model.Image);
+
+                Model.Image = string.Empty;
+            }
+
+            isSuccess = await service.UpdateAsync(EndpointsService.ProductEndpoint, Model, Model.Id);
+
+            if (isSuccess)
+            {
+                toastService.ShowSuccess($"{Model.Name} updated successfuly!");
+                navigationManager.NavigateTo("/products");
+            }
+        }
+    }
+
+    private async Task HandleFileSelection(InputFileChangeEventArgs e)
+    {
+        file = e.File;
+        isFileChanged = true;
+
+        if (file != null)
+        {
+            var ext = Path.GetExtension(file.Name);
+
+            if (ext.Contains("jpg") || ext.Contains("png") || ext.Contains("jpeg"))
+            {
+                msFile = file.OpenReadStream();
+
+                var resizedImageFile = await file.RequestImageFileAsync("image/png", 100, 100);
+
+                var buffer = new byte[resizedImageFile.Size];
+
+                await resizedImageFile.OpenReadStream().ReadAsync(buffer);
+
+                var imageBase64Data = Convert.ToBase64String(buffer);
+
+                imageDataURL = string.Format("data:image/png;base64,{0}", imageBase64Data);
+
+                isInvalidFileType = false;
+            }
+            else
+            {
+                isInvalidFileType = true;
+
+                imageDataURL = string.Empty;
+            }
         }
         else
         {
-            isFailed = true;
+            isInvalidFileType = false;
         }
     }
 }
