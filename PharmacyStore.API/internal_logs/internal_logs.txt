@@ -11726,3 +11726,147 @@
 2021-05-21 12:19:28.6042 Trace Opening c:/Users/Coding/source/repos/PharmacyStore.API/PharmacyStore.API/logs/2021-05-21_logfile.txt with allowFileSharedWriting=False
 2021-05-21 12:19:48.4117 Trace Opening c:/Users/Coding/source/repos/PharmacyStore.API/PharmacyStore.API/logs/2021-05-21_logfile.txt with allowFileSharedWriting=False
 2021-05-21 12:19:49.1944 Trace Opening c:/Users/Coding/source/repos/PharmacyStore.API/PharmacyStore.API/logs/2021-05-21_logfile.txt with allowFileSharedWriting=False
+2021-05-21 12:28:09.7130 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-05-21 12:28:10.0097 Debug Found assembly location directory: 'C:\Users\Coding\source\repos\PharmacyStore.API\PharmacyStore.API\bin\Debug\net5.0' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2021-05-21 12:28:10.0097 Debug Auto loading based on NLog-Assembly found location: C:\Users\Coding\source\repos\PharmacyStore.API\PharmacyStore.API\bin\Debug\net5.0
+2021-05-21 12:28:10.0097 Debug Search for auto loading files in location: C:\Users\Coding\source\repos\PharmacyStore.API\PharmacyStore.API\bin\Debug\net5.0
+2021-05-21 12:28:10.0457 Debug Start auto loading, location: C:\Users\Coding\source\repos\PharmacyStore.API\PharmacyStore.API\bin\Debug\net5.0
+2021-05-21 12:28:10.0489 Info Auto loading assembly file: C:\Users\Coding\source\repos\PharmacyStore.API\PharmacyStore.API\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+2021-05-21 12:28:10.0489 Info Loading assembly file: C:\Users\Coding\source\repos\PharmacyStore.API\PharmacyStore.API\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+2021-05-21 12:28:10.1347 Info NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 1.7.2.1548. Product version: 1.7.2+4bd1909dde91279dbdea4d1c38ff6a09de78f531. GlobalAssemblyCache: False
+2021-05-21 12:28:10.1347 Debug ScanAssembly('NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-05-21 12:28:10.1347 Info Auto loading assembly file: C:\Users\Coding\source\repos\PharmacyStore.API\PharmacyStore.API\bin\Debug\net5.0\NLog.Extensions.Logging.dll succeeded!
+2021-05-21 12:28:10.1402 Trace Assembly 'Microsoft.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-05-21 12:28:10.1402 Trace Assembly 'Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-05-21 12:28:10.1402 Trace Assembly 'NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c' will be hidden in callsite stacktrace
+2021-05-21 12:28:10.1402 Debug Auto loading done
+2021-05-21 12:28:10.1402 Info Message Template Auto Format enabled
+2021-05-21 12:28:10.1735 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-05-21 12:28:10.1735 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-05-21 12:28:10.1888 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-05-21 12:28:10.1888 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-05-21 12:28:10.1888 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-05-21 12:28:10.1888 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-05-21 12:28:10.1888 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-05-21 12:28:10.1888 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-05-21 12:28:10.1888 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-05-21 12:28:10.1888 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-05-21 12:28:10.2035 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-05-21 12:28:10.2035 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-05-21 12:28:10.2035 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-05-21 12:28:10.2035 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2021-05-21 12:28:10.2035 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-05-21 12:28:10.2035 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-05-21 12:28:10.2226 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2021-05-21 12:28:10.2226 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'c:/Users/Coding/source/repos/PharmacyStore.API/PharmacyStore.API/logs/${shortdate}_logfile.txt'
+2021-05-21 12:28:10.2226 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-05-21 12:28:10.2226 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-05-21 12:28:10.2226 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2021-05-21 12:28:10.2226 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-05-21 12:28:10.2226 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-05-21 12:28:10.2226 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-05-21 12:28:10.2226 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-05-21 12:28:10.2226 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-05-21 12:28:10.2226 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-05-21 12:28:10.2343 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-05-21 12:28:10.2343 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-05-21 12:28:10.2343 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-05-21 12:28:10.2343 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-05-21 12:28:10.2343 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-05-21 12:28:10.2343 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-05-21 12:28:10.2343 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-05-21 12:28:10.2343 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-05-21 12:28:10.2343 Info Adding target FileTarget(Name=logfile)
+2021-05-21 12:28:10.2343 Debug Registered target logfile: NLog.Targets.FileTarget
+2021-05-21 12:28:10.2343 Trace ParseRulesElement
+2021-05-21 12:28:10.2721 Debug Watching path 'C:\Users\Coding\source\repos\PharmacyStore.API\PharmacyStore.API\bin\Debug\net5.0' filter 'NLog.config' for changes.
+2021-05-21 12:28:10.2721 Debug --- NLog configuration dump ---
+2021-05-21 12:28:10.2721 Debug Targets:
+2021-05-21 12:28:10.2721 Debug File Target[logfile]
+2021-05-21 12:28:10.2721 Debug Rules:
+2021-05-21 12:28:10.2821 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2021-05-21 12:28:10.2821 Debug --- End of NLog configuration dump ---
+2021-05-21 12:28:10.2821 Trace FindReachableObject<System.Object>:
+2021-05-21 12:28:10.2821 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]'
+2021-05-21 12:28:10.2821 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2021-05-21 12:28:10.2821 Trace  Scanning FileTarget 'File Target[logfile]'
+2021-05-21 12:28:10.2821 Trace   Scanning Property FileName ''c:/Users/Coding/source/repos/PharmacyStore.API/PharmacyStore.API/logs/${shortdate}_logfile.txt'' NLog.Layouts
+2021-05-21 12:28:10.2821 Trace   Scanning SimpleLayout ''c:/Users/Coding/source/repos/PharmacyStore.API/PharmacyStore.API/logs/${shortdate}_logfile.txt''
+2021-05-21 12:28:10.2821 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-05-21 12:28:10.2821 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-05-21 12:28:10.2821 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-05-21 12:28:10.2965 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-05-21 12:28:10.2965 Trace   Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-05-21 12:28:10.2965 Trace   Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-05-21 12:28:10.2965 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-05-21 12:28:10.2965 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-05-21 12:28:10.2965 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-05-21 12:28:10.2965 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-05-21 12:28:10.2965 Trace     Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-05-21 12:28:10.2965 Trace     Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-05-21 12:28:10.2965 Trace      Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-05-21 12:28:10.2965 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-05-21 12:28:10.2965 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-05-21 12:28:10.2965 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-05-21 12:28:10.2965 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2021-05-21 12:28:10.2965 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2021-05-21 12:28:10.2965 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2021-05-21 12:28:10.3140 Info Validating config: TargetNames=logfile, ConfigItems=14, FilePath=C:\Users\Coding\source\repos\PharmacyStore.API\PharmacyStore.API\bin\Debug\net5.0\NLog.config
+2021-05-21 12:28:10.3140 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2021-05-21 12:28:10.3140 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2021-05-21 12:28:10.3286 Trace Initializing Layout Renderer: ${message}
+2021-05-21 12:28:10.3286 Trace Initializing Layout Renderer: ${literal}
+2021-05-21 12:28:10.3286 Trace Initializing Layout Renderer: ${level}
+2021-05-21 12:28:10.3286 Trace Initializing SimpleLayout=Layout Renderer: ${level}
+2021-05-21 12:28:10.3286 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-05-21 12:28:10.3286 Trace Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-05-21 12:28:10.3286 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-05-21 12:28:10.3286 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-05-21 12:28:10.3451 Trace Initializing Layout Renderer: ${uppercase}
+2021-05-21 12:28:10.3451 Trace Initializing Layout Renderer: ${literal}
+2021-05-21 12:28:10.3451 Trace Initializing Layout Renderer: ${longdate}
+2021-05-21 12:28:10.3451 Trace Initializing '${longdate} ${level:uppercase=true} ${message}'
+2021-05-21 12:28:10.3451 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-05-21 12:28:10.3451 Trace Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-05-21 12:28:10.3451 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-05-21 12:28:10.3451 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-05-21 12:28:10.3451 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-05-21 12:28:10.3451 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-05-21 12:28:10.3451 Trace   Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-05-21 12:28:10.3451 Trace   Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-05-21 12:28:10.3451 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-05-21 12:28:10.3451 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-05-21 12:28:10.3451 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-05-21 12:28:10.3451 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-05-21 12:28:10.3591 Trace Initializing Layout Renderer: ${literal}
+2021-05-21 12:28:10.3591 Trace Initializing Layout Renderer: ${shortdate}
+2021-05-21 12:28:10.3591 Trace Initializing Layout Renderer: ${literal}
+2021-05-21 12:28:10.3591 Trace Initializing 'c:/Users/Coding/source/repos/PharmacyStore.API/PharmacyStore.API/logs/${shortdate}_logfile.txt'
+2021-05-21 12:28:10.3591 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-05-21 12:28:10.3591 Trace Scanning SimpleLayout ''c:/Users/Coding/source/repos/PharmacyStore.API/PharmacyStore.API/logs/${shortdate}_logfile.txt''
+2021-05-21 12:28:10.3591 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-05-21 12:28:10.3591 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-05-21 12:28:10.3591 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-05-21 12:28:10.3591 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-05-21 12:28:10.3591 Trace Initializing File Target[logfile]
+2021-05-21 12:28:10.3591 Trace FindReachableObject<NLog.Layouts.Layout>:
+2021-05-21 12:28:10.3591 Trace Scanning FileTarget 'File Target[logfile]'
+2021-05-21 12:28:10.3591 Trace  Scanning Property FileName ''c:/Users/Coding/source/repos/PharmacyStore.API/PharmacyStore.API/logs/${shortdate}_logfile.txt'' NLog.Layouts
+2021-05-21 12:28:10.3591 Trace  Scanning SimpleLayout ''c:/Users/Coding/source/repos/PharmacyStore.API/PharmacyStore.API/logs/${shortdate}_logfile.txt''
+2021-05-21 12:28:10.3591 Trace  Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-05-21 12:28:10.3591 Trace  Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-05-21 12:28:10.3591 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2021-05-21 12:28:10.3591 Trace File Target[logfile] has 2 layouts
+2021-05-21 12:28:10.3782 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.RetryingMultiProcessFileAppender+Factory
+2021-05-21 12:28:10.3782 Info Configuration initialized.
+2021-05-21 12:28:10.3782 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.9.12899. Product version: 4.7.9+e8712e62842e2d74d60fdf37cf74d743750e5ca2. GlobalAssemblyCache: False
+2021-05-21 12:28:10.3901 Debug Targets for PharmacyStore.API.Services.LoggerService by level:
+2021-05-21 12:28:10.3901 Debug Trace =>
+2021-05-21 12:28:10.3901 Debug Debug => logfile
+2021-05-21 12:28:10.3901 Debug Info => logfile
+2021-05-21 12:28:10.3901 Debug Warn => logfile
+2021-05-21 12:28:10.3901 Debug Error => logfile
+2021-05-21 12:28:10.3901 Debug Fatal => logfile
+2021-05-21 12:28:10.4361 Debug FileTarget(Name=logfile): Preparing for new file 'c:/Users/Coding/source/repos/PharmacyStore.API/PharmacyStore.API/logs/2021-05-21_logfile.txt'
+2021-05-21 12:28:10.4482 Debug Creating file appender: c:/Users/Coding/source/repos/PharmacyStore.API/PharmacyStore.API/logs/2021-05-21_logfile.txt
+2021-05-21 12:28:10.4538 Trace Opening c:/Users/Coding/source/repos/PharmacyStore.API/PharmacyStore.API/logs/2021-05-21_logfile.txt with allowFileSharedWriting=False

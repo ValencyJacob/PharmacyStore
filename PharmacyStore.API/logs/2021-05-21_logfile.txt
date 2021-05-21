@@ -58,3 +58,4 @@
 2021-05-21 12:19:28.6042 INFO The operation <get product list> was successful.
 2021-05-21 12:19:48.4117 INFO The operation <get company list> was successful.
 2021-05-21 12:19:49.1944 INFO The operation <get product list> was successful.
+2021-05-21 12:28:10.3901 INFO The operation <get company list> was successful.
